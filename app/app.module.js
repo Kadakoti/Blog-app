@@ -20,7 +20,8 @@ angular.module('myApp', [
   'blogList',
   'blogDetail',
   'authors',
-  'aboutus'
+  'aboutus',
+  'header'
 ]);
 
 
