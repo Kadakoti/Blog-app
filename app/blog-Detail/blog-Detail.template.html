@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Blog Details</title>
+</head>
+<body>
+    <div class="container" style="background-color:  rgb(191, 231, 202);">
+        <hr>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#!/blog" style="color: black; margin-right: 50px;">Blogs</a>
+                  <a class="nav-link" href="#!/blog/authors" style="color: black; margin-right: 50px;">Authors</a>
+                  <a class="nav-link" href="#/blog/aboutus" style="color: black; margin-right: 50px;">About Us</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <hr>
+        <div class="row">
+            <div class="col">
+
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <h4 class="display-4">{{$ctrl.blog.title}}</h4>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Written by <cite> {{$ctrl.author.name}}</cite>
+                    </figcaption>
+                </figure>
+
+
+            </div>
+        </div>
+        <hr>
+        <img ng-src="https://th.bing.com/th/id/R.e1707c345d5ac10c80a674030e606643?rik=pOsTg5KBoLuNvw&riu=http%3a%2f%2fwww.snut.fr%2fwp-content%2fuploads%2f2015%2f08%2fimage-de-paysage.jpg&ehk=1O5SWKkGpZ8yU%2b%2fAnLXG1v8k6BKxgyiXgHbOWBW1ir0%3d&risl=1&pid=ImgRaw&r=0" class="img-fluid" width="100%" >
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+                <p>{{$ctrl.blog.body}} {{$ctrl.blog.body}} {{$ctrl.blog.body}} {{$ctrl.blog.body}}{{$ctrl.blog.body}}</p>
+                <p>{{$ctrl.blog.body}} {{$ctrl.blog.body}} {{$ctrl.blog.body}}{{$ctrl.blog.body}}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+                <h5 class="display-5">Comments</h5>
+                <ol class="list-group">
+                    <li class="list-group-item" ng-repeat="comment in $ctrl.comments  ">
+                        <!-- <p>{{comment.body}}</p> -->
+                        <figure class="text-left">
+                            <blockquote class="blockquote">
+                                {{comment.name}}
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                By {{comment.email}}
+                            </figcaption>
+                            <p>
+                                {{comment.body}}
+                            </p>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <ol>
+    <li ng-repeat="comment in $ctrl.comments  ">
+        <p>{{comment.body}}</p>
+    </li>
+</ol> -->
